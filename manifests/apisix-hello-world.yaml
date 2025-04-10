@@ -1,0 +1,13 @@
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: hello-world-route
+spec:
+  http:
+    - name: hello-world
+      match:
+        paths:
+          - /hello
+      backends:
+        - serviceName: hello-world
+          servicePort: 80
