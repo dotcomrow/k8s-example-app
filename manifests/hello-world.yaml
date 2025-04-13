@@ -17,6 +17,9 @@ spec:
       containers:
         - name: hello-world
           image: nginxdemos/hello:latest
+          env:
+            - name: ENABLE_IPV6
+              value: "false"
           resources:
             limits:
               memory: "128Mi"
